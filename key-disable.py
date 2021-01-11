@@ -1,9 +1,11 @@
 from ctypes import *
 import keyboard
-
-shortcut = 'alt+x' #define your hot-key
-shortcut2 = 'alt+c'
-print('Hotkey set as:', shortcut)
+	
+block_shortcut = 'alt+x' #Block Shortcut
+unblock_shortcut = 'alt+c' #Unblock Shortcut
+emergency_shortcut = 'alt+esc' #emergency shorcut use this if your desired shortcut doesnt work.
+print("block:", block_shortcut) #you can comment this out if you want to.
+print("unblock:", unblock_shortcut) 
 
 def trigger():
     print("block shortcut triggered")
@@ -13,11 +15,10 @@ def trigger_unblock():
     print("unblock shortcut triggered")
     windll.user32.BlockInput(False)
     
-keyboard.add_hotkey(shortcut, trigger)
-keyboard.add_hotkey(shortcut2, trigger_unblock)
-
-print("esc to stop")
-keyboard.wait("esc")
+keyboard.add_hotkey(block_shortcut, trigger)
+keyboard.add_hotkey(unblock_shortcut, trigger_unblock)
+ 
+keyboard.wait(emergency_shortcut)
 #ok = windll.user32.BlockInput(True) #enable block
 
 #or 
