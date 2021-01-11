@@ -10,6 +10,7 @@ it disables all the keys and mouse input until the keyboard shortcut is called,
 it blocks all inputs except for the keyboard shortcut or you can also call escape.
 
 > Installation and Usage:
+- You can use the .py version or .exe one
 - Download from the latest release.
 - Run cmd w/ administrative privileges.
 - cd to the path of the block-input file.
