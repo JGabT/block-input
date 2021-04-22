@@ -1,0 +1,13 @@
+block-input
+====
+description:
+Blocks both keyboard and mouse input using keyboard shortcut
+====
+usage:
+clone source.
+- Run cmd w/ administrative privileges.
+- cd to the path of the block-input file.
+- run this command on the prompt: "python key-disable.py"
+- Block input : alt+x
+- Unblock input : alt+c
+change keybinds in lines 4-6
